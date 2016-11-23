@@ -23,7 +23,7 @@ function! s:load_project_vimrc(loc)
 	let dirs=finddir('.vim.d', escape(a:loc, ' ').';', -1)
 	for i in reverse(dirs)
 		let dir=fnamemodify(i, ':p:h')
-		let rc=findfile('.vimrc', dir)
+		let rc=findfile('vimrc', dir)
 		if filereadable(rc)
 			source `=rc`
 		endif
