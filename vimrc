@@ -19,6 +19,11 @@ set wildmode=list:longest
 filetype off
 filetype plugin indent off
 
+function! AppendRuntimepath(path)
+	let dir=fnamemodify(escape(a:path, ' '), ':p:h')
+	let &rtp=dir.','.&rtp.','.dir.'/after'
+endfunction
+
 function! s:load_project_vimrc(loc)
 	let dirs=finddir('.vim.d', escape(a:loc, ' ').';', -1)
 	for i in reverse(dirs)
