@@ -1,0 +1,16 @@
+[user]
+	name = te9yie
+	email = te9yie@users.noreply.github.com
+[url "git@github.com:"]
+	pushinsteadof = git://gist.github.com/
+	pushinsteadof = git://github.com/
+	pushinsteadof = https://gist.github.com/
+	pushinsteadof = https://github.com/
+[ghq]
+	root = ~/.ghq
+	root = ~/.go/src
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

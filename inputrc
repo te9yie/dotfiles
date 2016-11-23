@@ -1,0 +1,5 @@
+set editing-mode vi
+set bell-style none
+Tab: complete
+Control-p: history-search-backward
+Control-n: history-search-forward
