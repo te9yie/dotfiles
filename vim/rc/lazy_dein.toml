@@ -3,6 +3,14 @@ repo = 'Shougo/neocomplete.vim'
 on_i = 1
 
 [[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = 'cpp'
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+on_ft = 'cpp'
+
+[[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 
