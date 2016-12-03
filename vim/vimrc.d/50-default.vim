@@ -22,6 +22,4 @@ endif
 
 let mapleader = "\<Space>"
 
-nnoremap <Leader>w :w<CR>
-
 filetype plugin indent on
