@@ -79,6 +79,7 @@ hook_source = '''
 repo = 'justmao945/vim-clang'
 on_ft = 'cpp'
 hook_source = '''
+	autocmd FileType cpp setlocal completeopt-=preview
 	let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
 	let g:clang_enable_format_command = 0
 '''
@@ -98,10 +99,7 @@ hook_source = '''
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 hook_source = '''
-	augroup py_no_preview
-		autocmd!
-		autocmd FileType python setlocal completeopt-=preview
-	augroup END
+	autocmd FileType python setlocal completeopt-=preview
 '''
 
 [[plugins]]
