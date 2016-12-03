@@ -20,6 +20,8 @@ if has('syntax')
 	syntax on
 endif
 
-let mapleader = "<Space>"
+let mapleader = "\<Space>"
+
+nnoremap <Leader>w :w<CR>
 
 filetype plugin indent on
