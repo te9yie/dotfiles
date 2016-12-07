@@ -11,7 +11,6 @@ export PATH=${HOME}/.local/bin:${PATH}
 case "$(uname -s)" in
 "Darwin")
 	alias ls="ls -G"
-	alias mvim="/Applications/MacVim.app/Contents/MacOS/mvim"
 	;;
 *)
 	alias ls="ls --color"
