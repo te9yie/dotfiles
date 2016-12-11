@@ -21,5 +21,3 @@ if has('syntax')
 endif
 
 let mapleader = "\<Space>"
-
-filetype plugin indent on
