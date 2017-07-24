@@ -7,3 +7,4 @@ do
 	ln -sf ${DOTDIR}/${i} ${HOME}/.${i}
 	echo ln -sf ${DOTDIR}/${i} ${HOME}/.${i}
 done
+mkdir -p ${HOME}/.vim/autoload ${HOME}/.vim/bundle && curl -LSso ${HOME}/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
