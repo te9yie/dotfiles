@@ -17,11 +17,20 @@ set nobackup
 set nocompatible
 set noundofile
 set nowrapscan
+set number
+set relativenumber
 set smartcase
 set smarttab
 set statusline=%f\ %<%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'.(&bomb?'[B]':'')}%=%l,%c%V:%3p%%
 set ttyfast
 set wildmode=list:longest
+
+noremap ; :
+noremap : ;
+nnoremap t <Nop>
+nnoremap tt <C-]>
+nnoremap tp :<C-u>pop<CR>
+nnoremap ts :<C-u>tselect<CR>
 
 let mapleader = "\<Space>"
 
