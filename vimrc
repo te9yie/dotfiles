@@ -25,13 +25,6 @@ set statusline=%f\ %<%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'.(&bomb?'[
 set ttyfast
 set wildmode=list:longest
 
-noremap ; :
-noremap : ;
-nnoremap t <Nop>
-nnoremap tt <C-]>
-nnoremap tp :<C-u>pop<CR>
-nnoremap ts :<C-u>tselect<CR>
-
 let mapleader = "\<Space>"
 
 if has('vim_starting')
