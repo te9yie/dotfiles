@@ -1,9 +1,7 @@
-if has('vim_starting')
-	for dir in reverse(finddir('.vim.d', escape(getcwd(), ' ').';', -1))
-		call pathogen#surround(fnamemodify(dir, ':p:h'))
-	endfor
-	execute pathogen#infect()
-endif
+for dir in reverse(finddir('.vim.d', escape(getcwd(), ' ').';', -1))
+	call pathogen#surround(fnamemodify(dir, ':p:h'))
+endfor
+execute pathogen#infect()
 
 set autoindent
 set backspace=indent,eol,start
