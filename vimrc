@@ -1,7 +1,10 @@
-for dir in reverse(finddir('.vim.d', escape(getcwd(), ' ').';', -1))
-	call pathogen#surround(fnamemodify(dir, ':p:h'))
-endfor
-execute pathogen#infect()
+if !filereadable(expand("~/.vim/autoload/plug.vim"))
+	execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+call plug#begin()
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
 
 set autoindent
 set backspace=indent,eol,start
@@ -25,12 +28,8 @@ set wildmode=list:longest
 
 let mapleader = "\<Space>"
 
-for dir in reverse(finddir('.vim.d', escape(getcwd(), ' ').';', -1))
-	let rc=findfile('vimrc', fnamemodify(dir, ':p:h'))
-	if filereadable(rc)
-		source `=rc`
-	endif
-endfor
-
-filetype plugin indent on
-syntax on
+augroup nerdtree-opendir
+	autocmd!
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+augroup END
