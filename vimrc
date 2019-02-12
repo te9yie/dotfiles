@@ -28,6 +28,8 @@ set wildmode=list:longest
 
 let mapleader = "\<Space>"
 
+nnoremap <Leader>w :w<CR>
+
 augroup nerdtree-opendir
 	autocmd!
 	autocmd StdinReadPre * let s:std_in=1
