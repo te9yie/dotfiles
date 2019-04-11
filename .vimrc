@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'rhysd/vim-clang-format', { 'for': 'cpp' }
 call plug#end()
 
 set autoindent
@@ -24,3 +25,5 @@ set wildmode=list:longest
 let mapleader = "\<Space>"
 
 colorscheme desert
+
+let g:clang_format#auto_format = 1
